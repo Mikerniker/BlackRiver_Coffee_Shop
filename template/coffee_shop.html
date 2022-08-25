@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="blackriver ">
+    <div class="blackriver-header">
+      <main role="main" class="inner-cover">
+          <h1 class="blackriver-text1 text-center display-1">BlackRiver Coffee</h1>
+          <h2 class="blackriver-text2 text-center h1"> Bold. Rich. Satisfying.</h2>
+      </main>
+    </div>
+</div>
+
+
+<!-- Highlights Section -->
+<section class="highlights">
+     <div class="container-fluid">
+         <div class="row">
+             <div class="highlight-element col-lg-4">
+                 <span class="icon-features material-symbols-outlined size-48">
+                     handshake
+                 </span>
+                 <h3> Fair Trade </h3>
+             </div>
+             <div class="highlight-element col-lg-4">
+                  <span class="icon-features material-symbols-outlined">
+                      eco
+                  </span>
+                 <h3>Ethically and Sustainably-Sourced</h3>
+             </div>
+             <div class="highlight-element col-lg-4">
+                 <span class="icon-features material-symbols-outlined">
+                     compost
+                 </span>
+                 <h3> Organic Specialty Coffee </h3>
+             </div>
+         </div>
+     </div>
+</section>
+
+
+<!-- Coffee Options -->
+<section>
+<div class="row">
+    <div class="card-deck col-sm-4">
+        <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1582392188203-bbc6afc7e79a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80" alt="beans" height="500" width="450">
+            <div class="card-body">
+                <h4 class="card-title">Our Beans</h4>
+                <p class="coffee-card card-text">Order our delicious products online.</p>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="coffee-btn btn btn-secondary btn-lg"><a class="nav-link" href="{% url 'coffee_view' %}">Select</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck col-sm-4">
+        <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1582483497345-a828e4249f54?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80" alt="process" height="500" width="450">
+            <div class="card-body">
+                <h4 class="card-title">Our People and Process</h4>
+                <p class="coffee-card card-text">Learn more about us.</p>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="coffee-btn btn btn-secondary btn-lg"><a class="nav-link" href="{% url 'about_view' %}">Select</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck col-sm-4">
+        <div class="card">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1598198152469-172cd80d7a24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29mZmVlJTIwYmVhbnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="menu" height="500" width="450">
+            <div class="card-body">
+                <h4 class="card-title">Recipes</h4>
+                <p class="coffee-card card-text">Try our free recipes!</p>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="coffee-btn btn btn-secondary btn-lg"><a class="nav-link" href="{% url 'recipe_view' %}">Select</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+          
+<!-- Order Now Section -->
+
+<section class="order_now">
+    <div id="order" class="order-section">
+        <p>We freshly roast all our Gourmet Coffee Beans in small batches. We promise fast shipping to anywhere in the United States.
+            Our heat-sealed eco-friendly valve bags keep our gourmet coffee beans as fresh as the day they were roasted. We have whole bean and multiple grind selections to meet your specific brewing needs.</p>>
+        <p>Thank you for shopping at BlackRiver. We take care to provide you with the best, and we hope you enjoy our gourmet coffee!</p>
+        <button type="submit" id="order-btn" class="btn btn-secondary btn-lg"><a class="nav-link" href="{% url 'coffee_view' %}">Order Now</a></button>
+    </div>
+
+</section>
+
+
+<!-- Video Section -->
+<section class="video-section container-fluid">
+    <div class="video embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" frameborder="0" src="https://assets.mixkit.co/videos/preview/mixkit-video-sequence-of-the-coffee-preparation-process-4989-large.mp4?autoplay=1" allow='autoplay' allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- Subscribe Section -->
+<section class="subscribe container">
+    <form action="{% url 'home_view' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group row">
+            <div class="col-xs-6">
+                <h2>Subscribe to our newsletter:</h2>
+                <p>Sign up to our mailing list and get 15% off your next coffee order!</p>
+            </div>
+            <div class="col-xs-2">
+                <input id="email" name="subscribeEmail" type="email" class="form-control form-control-lg" placeholder="Enter Your Email" aria-label="Recipient's email" aria-describedby="basic-addon2">
+            </div>
+            <a href=" https://www.freecodecamp.com/email-submit">
+                <button type="submit" id="submit" class="subscribe-btn btn btn-secondary btn-lg">Subscribe</button>
+            </a>
+            <div><p> {{ email_received }} </p></div>
+        </div>
+    </form>
+</section>
+
+
+{% endblock content %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="checkout-section">
+    <h2 class="py-5 text-center">Checkout</h2>
+</div>
+
+<div class="row g-5 justify-content-center">
+    <div class="col-md-3 col-lg-4 ">
+        <h4 class="d-flex justify-content-center align-items-center mb-3">
+            <span class="text-white">Your Cart</span>
+        </h4>
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between 1h-sm">
+                <div>
+                    <h6 class="my-0">Coffee</h6>
+                </div>
+                <div>
+                    <h6 class="my-0">Quantity</h6>
+                </div>
+                <span class="text-muted">Price</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between 1h-sm">
+                <div>
+                    <h6 class="my-0"> {{coffee_order}}</h6>
+                </div>
+                <div>
+                    <h6 class="my-0"> {{coffee_quantity}}</h6>
+                </div>
+                <span class="text-muted">{{coffee_order_price}}</span>
+            </li>
+            <!--
+            <li class="list-group-item d-flex justify-content-between 1h-sm">
+                <div>
+                    <h6 class="my-0">{{coffee_order}}</h6>
+                </div>
+                <span class="text-muted">{{coffee_order_price}}</span>
+            </li> -->
+            <li class="list-group-item d-flex justify-content-between">
+                <span>Total (USD)</span>
+                <strong>{{coffee_total}}</strong>
+            </li>
+        </ul>
+        <button type="submit" class="btn btn-secondary btn-lg">Continue to Checkout</button>
+    </div>
+</div>
+
+
+{% endblock content %}

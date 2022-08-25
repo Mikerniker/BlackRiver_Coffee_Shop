@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #2D2424;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 100px;
+  color: #FCFCFD;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  color: #FCFCFD;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-family: "Cinzel", serif;
+  font-size: 30px;
+  color: white;
+}
+
+h4 {
+  font-size: 25px;
+  letter-spacing: 0.1em;
+}
+
+p {
+  font-size: 20px;
+  color: white;
+}
+
+.coffee-card, .product-card {
+   color: #171717;
+}
+
+
+
+/* Navigation Section */
+.nav_font {
+  color: #3F4E4F;
+}
+
+/* Header Section */
+
+.blackriver {
+    background: url("https://images.unsplash.com/photo-1613158556069-e7d8eae76214?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.inner-cover {
+    padding-top: 15rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+
+.blackriver-text2 {
+    margin-top: 4rem;
+}
+
+
+
+
+/* Highlights Section */
+
+.highlights {
+    padding: 5rem;
+}
+
+.coffee-btn {
+    margin-top: 1rem;
+}
+
+
+/* Subscribe Section */
+.subscribe {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+span.icon-features {
+    color: white;
+    font-size: 60px;
+    font-variation-settings: 'OPSZ' 48;
+}
+
+.subscribe-btn {
+    margin-top: 1rem;
+}
+
+
+/* Video Section */
+
+.video {
+    background-color:  #5C3D2E;
+    padding: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+
+iframe {
+   height: 28rem;
+    width: 50rem;
+}
+
+.btn {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  background-color: #256D85;
+}
+
+/* Order Now Section */
+
+#order {
+  background-color: #5C3D2E;
+  padding: 5rem;
+  margin: 2rem;
+}
+
+
+/* OTHER PAGES */
+
+/* About Page */
+
+.about {
+    padding: 5rem;
+}
+
+.about-img {
+    border-radius: 50%;
+    height: 30rem;
+    width: 30rem;
+}
+
+
+/* Contact Page */
+.contact-us, .recipes-section, .checkout-section {
+    padding-top: 2rem;
+}
+
+.contact-form {
+  font-size: 20px;
+  color: white;
+}
+
+
+/* Recipes Page */
+
+.recipe-font {
+   color: white;
+   padding-top: 2rem;
+}
+
+
+
+.americano {
+    border-radius: 50%;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  body {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 992px){
+.inner-cover {
+    padding-top: 12rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.blackriver-text2 {
+    margin-top: 1rem;
+}
+
+.icon-features {
+    margin-top: 3rem;
+}
+
+
+.video {
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+iframe {
+   height: 10rem;
+    width: 15rem;
+}
+
+
+}
+/*
+.blackriver-text1 {
+    padding-top: 20rem;
+    padding-left: 50rem;
+    padding-right: 50rem;
+}
+
+*/
